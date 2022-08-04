@@ -85,8 +85,9 @@ var between = function between(distributionArray, a, b) {
 }
 
 var protoCombat = function protoCombat(dist, atk, def) {
-    var needed = def - atk - 1 - config.dieNumber;
-    console.log(def, atk, config.dieNumber);
+    var needed = def - atk - config.dieNumber;
+    needed = needed < 1? 1 : needed; //crit miss misses even if attack is greater than defense
+    console.log(def, atk, config.dieNumber, needed);
     return between(dist, needed, dist.length);
 }
 
