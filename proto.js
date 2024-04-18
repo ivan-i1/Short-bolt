@@ -1,4 +1,4 @@
-var STANDARD = {
+const STANDARD = {
     DICE: 2,
     SIDE: 6,
     SIMULATIONS: 1000
